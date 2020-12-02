@@ -1,0 +1,17 @@
+[Unit]
+Description=Triggers fp-csg-aws-log-service-timer.sh to run fp-csg-aws-log-service.service if it's not active
+Requires=fp-csg-aws-log-service.service
+After=fp-csg-aws-log-service.service
+
+[Service]
+Environment=
+WorkingDirectory=
+User=
+ExecStart=/bin/bash -c 'cd ${APP_HOME}; ./deploy/fp-csg-aws-log-service-timer.sh'
+Restart=on-failure
+RestartSec=60
+StartLimitBurst=3
+StartLimitInterval=360
+
+[Install]
+WantedBy=multi-user.target

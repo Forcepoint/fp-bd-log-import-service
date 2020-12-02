@@ -1,0 +1,15 @@
+[Unit]
+Description=This is a Forcepoint log service used to download AWS Forcepoint Private Access logs.
+
+[Service]
+Environment=
+WorkingDirectory=
+User=
+ExecStart=
+Restart=on-failure
+RestartSec=60
+StartLimitBurst=3
+StartLimitInterval=360
+
+[Install]
+WantedBy=multi-user.target

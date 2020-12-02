@@ -1,0 +1,15 @@
+[Unit]
+Description=This is a Forcepoint log service used to clean recent Forcepoint logs.
+
+[Service]
+Environment=
+WorkingDirectory=
+User=
+ExecStart=/bin/bash -c 'cd ${APP_HOME}; ./scripts/clean-logs.sh'
+Restart=on-failure
+RestartSec=60
+StartLimitBurst=3
+StartLimitInterval=360
+
+[Install]
+WantedBy=multi-user.target
