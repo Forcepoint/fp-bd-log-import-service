@@ -70,7 +70,7 @@ docker run --detach \
    --name fp-pa-aws-log-import-service \
    --restart unless-stopped \
    --volume /opt/fp-aws-log-import-service/.aws:/root/.aws \
-   --volume FpPaLogsVolume:/forcepoint-logs \
+   --volume FpLogsVolume:/forcepoint-logs \
    --volume FpErrorLogsVolume:/app/fp-aws-log-import-service/logs \
    fp-aws-log-import-service
 ```
@@ -85,7 +85,7 @@ docker run --detach \
    --name fp-pa-aws-log-import-service \
    --restart unless-stopped \
    --volume /opt/fp-aws-log-import-service/.aws:/root/.aws \
-   --volume FpPaLogsVolume:/forcepoint-logs \
+   --volume FpLogsVolume:/forcepoint-logs \
    --volume FpErrorLogsVolume:/app/fp-aws-log-import-service/logs \
    fp-aws-log-import-service
 ```
@@ -99,7 +99,7 @@ docker run --detach \
    --name fp-csg-aws-log-import-service \
    --restart unless-stopped \
    --volume /opt/fp-aws-log-import-service/.aws:/root/.aws \
-   --volume FpCsgLogsVolume:/forcepoint-logs \
+   --volume FpLogsVolume:/forcepoint-logs \
    --volume FpErrorLogsVolume:/app/fp-aws-log-import-service/logs \
    fp-aws-log-import-service
 ```
